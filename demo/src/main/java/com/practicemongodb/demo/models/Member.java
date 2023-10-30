@@ -5,27 +5,27 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Data;
 
-@Document
+@Document("members") // if collection specified, data not saved
 @Data
 public class Member {
 
     @Id
-    private int id;
+    private Integer id;
     private String name;
-    private String teamName;
+    private String team;
     private int contributions;
 
     public Member() {
         id = -1;
         name = "test";
-        teamName = "test";
+        team = "test";
         contributions = -1;
     }
 
-    public Member(int id, String name, String teamName) {
+    public Member(int id, String name, String team) {
         this.id = id;
         this.name = name;
-        this.teamName = teamName;
+        this.team = team;
         contributions = 0;
     }
 
