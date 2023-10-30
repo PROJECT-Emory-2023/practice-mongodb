@@ -19,7 +19,7 @@ public class Member {
         id = -1;
         name = "test";
         team = "test";
-        contributions = -1;
+        contributions = 0;
     }
 
     public Member(int id, String name, String team) {
